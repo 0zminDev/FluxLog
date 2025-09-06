@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on FluxLog</title>
-    <link>https://0zminDev.github.io/FluxLog/tags/</link>
+    <link>https://www.fluxengine.dev/tags/</link>
     <description>Recent content in Tags on FluxLog</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="https://0zminDev.github.io/FluxLog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.fluxengine.dev/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

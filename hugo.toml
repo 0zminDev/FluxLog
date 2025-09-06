@@ -9,8 +9,23 @@ defaultcontentlanguage = "en"
 pagerSize = 20
 
 [services]
-[services.disqus]
-shortname = "0zminDev"
+# [services.disqus]
+# shortname = "0zminDev"
+
+# Giscus Comments
+[params.giscus]
+  repo = "0zminDev/FluxLog"
+  repoID = "R_kgDONJK7lg"  # You need to replace this with your actual repo ID
+  category = "General"     # You need to replace this with your discussion category
+  categoryID = "DIC_kwDONJK7ls4CjpnF"  # You need to replace this with your actual category ID
+  mapping = "pathname"
+  strict = "0"
+  reactionsEnabled = "1"
+  emitMetadata = "0"
+  inputPosition = "bottom"
+  theme = "preferred_color_scheme"
+  lang = "en"
+  loading = "lazy"
 
 [markup.highlight]
 style = "github-dark"
