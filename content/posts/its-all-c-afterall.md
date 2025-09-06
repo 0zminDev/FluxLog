@@ -1,6 +1,6 @@
 +++
 date = '2025-09-06T10:31:53+02:00'
-draft = true
+draft = false
 title = "It's All C afterall"
 +++
 
