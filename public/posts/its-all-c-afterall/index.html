@@ -188,6 +188,7 @@ Meanwhile, game code looks by definition like <strong>spaghetti on top of more s
 <p>The first very important question I had to solve was: <strong>what language am I going to use?</strong></p>
 <p>So I did the worst thing you can do in that position – I asked Reddit.<br>
 Oh boy. If only I knew what kind of mistake that was.</p>
+<p>The replies flooded in like a tidal wave of unsolicited, contradictory advice. One comment thread devolved into a 50-reply argument about memory safety. Another was just a single, cryptic message: &ldquo;Have you considered Lisp?&rdquo; A chorus of users ignored the question entirely to tell me I should be building games, not engines, and that I was wasting my life. For every helpful suggestion, there were three pedantic corrections about my terminology and five people recommending their obscure pet language that has 12 stars on GitHub.</p>
 <p><img src="/images/openheimer.png" alt="Me after posting the question"><br>
 <em>Me after posting the question</em></p>
 <p>Ok, but let’s cut the crap. After a couple of minutes, I had a list of candidates:</p>
@@ -212,8 +213,6 @@ because (spoiler) <strong>CMake is pain in the ass. As always.</strong></p>
         form.embeddable-buttondown-form {
           padding: 15px;
           max-width: 400px;
-          background-color: var(--color-background-secondary, #f8f9fa);
-          border-radius: 8px;
           margin: 20px 0;
         }
 
@@ -221,7 +220,7 @@ because (spoiler) <strong>CMake is pain in the ass. As always.</strong></p>
           display: block;
           margin-bottom: 5px;
           font-weight: bold;
-          color: var(--color-text, #333);
+          color: var(--color-text, #fff);
         }
 
         form.embeddable-buttondown-form input[type="email"] {
@@ -230,8 +229,7 @@ because (spoiler) <strong>CMake is pain in the ass. As always.</strong></p>
           margin-bottom: 10px;
           border: 1px solid var(--color-border, #ccc);
           border-radius: 4px;
-          background-color: var(--color-background, #fff);
-          color: var(--color-text, #333);
+          color: var(--color-text, #fff);
         }
 
         form.embeddable-buttondown-form input[type="submit"] {

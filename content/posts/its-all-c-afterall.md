@@ -29,6 +29,8 @@ The first very important question I had to solve was: **what language am I going
 So I did the worst thing you can do in that position – I asked Reddit.  
 Oh boy. If only I knew what kind of mistake that was.  
 
+The replies flooded in like a tidal wave of unsolicited, contradictory advice. One comment thread devolved into a 50-reply argument about memory safety. Another was just a single, cryptic message: "Have you considered Lisp?" A chorus of users ignored the question entirely to tell me I should be building games, not engines, and that I was wasting my life. For every helpful suggestion, there were three pedantic corrections about my terminology and five people recommending their obscure pet language that has 12 stars on GitHub.
+
 ![Me after posting the question](/images/openheimer.png)  
 *Me after posting the question*
 
