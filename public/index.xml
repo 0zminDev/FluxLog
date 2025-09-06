@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>FluxLog</title>
-    <link>http://www.example.com/</link>
+    <link>https://0zminDev.github.io/FluxLog/</link>
     <description>Recent content on FluxLog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sat, 06 Sep 2025 10:31:53 +0200</lastBuildDate>
-    <atom:link href="http://www.example.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://0zminDev.github.io/FluxLog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>It&#39;s All C afterall</title>
-      <link>http://www.example.com/posts/its-all-c-afterall/</link>
+      <link>https://0zminDev.github.io/FluxLog/posts/its-all-c-afterall/</link>
       <pubDate>Sat, 06 Sep 2025 10:31:53 +0200</pubDate>
-      <guid>http://www.example.com/posts/its-all-c-afterall/</guid>
+      <guid>https://0zminDev.github.io/FluxLog/posts/its-all-c-afterall/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;In the beginning, there was chaos…&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;… and from this chaos emerged a whole bunch of wrong decisions, mistakes, and failures that eventually turned into FluxEngine.&lt;/p&gt;&#xA;&lt;p&gt;In this blog, I’m going to show how a simple intern managed to start creating an engine… instead of accidentally deleting the production DB.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve always wanted to build a game engine,&lt;br&gt;&#xA;so all the dudes on the internet telling me &lt;em&gt;“build games, not game engines”&lt;/em&gt;… well, they sucked for me.&lt;/p&gt;</description>
     </item>
   </channel>

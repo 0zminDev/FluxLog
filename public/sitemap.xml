@@ -2,21 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://www.example.com/</loc>
+    <loc>https://0zminDev.github.io/FluxLog/</loc>
     <lastmod>2025-09-06T10:31:53+02:00</lastmod>
   </url><url>
-    <loc>http://www.example.com/posts/its-all-c-afterall/</loc>
+    <loc>https://0zminDev.github.io/FluxLog/posts/its-all-c-afterall/</loc>
     <lastmod>2025-09-06T10:31:53+02:00</lastmod>
   </url><url>
-    <loc>http://www.example.com/posts/</loc>
+    <loc>https://0zminDev.github.io/FluxLog/posts/</loc>
     <lastmod>2025-09-06T10:31:53+02:00</lastmod>
   </url><url>
-    <loc>http://www.example.com/authors/</loc>
+    <loc>https://0zminDev.github.io/FluxLog/authors/</loc>
   </url><url>
-    <loc>http://www.example.com/categories/</loc>
+    <loc>https://0zminDev.github.io/FluxLog/categories/</loc>
   </url><url>
-    <loc>http://www.example.com/series/</loc>
+    <loc>https://0zminDev.github.io/FluxLog/series/</loc>
   </url><url>
-    <loc>http://www.example.com/tags/</loc>
+    <loc>https://0zminDev.github.io/FluxLog/tags/</loc>
   </url>
 </urlset>

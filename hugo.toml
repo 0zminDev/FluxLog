@@ -23,7 +23,8 @@ style = "github-dark"
   avatarurl = "images/avatar.png"
 
   faviconSVG = "/images/favicon.svg"
-  favicon_96 = "/images/favicon-96x96.png"
+  favicon_32 = "/images/favicon-32x32.png"
+  favicon_16 = "/images/favicon-16x16.png"
 
   since = 2025
 
