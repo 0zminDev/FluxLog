@@ -207,6 +207,71 @@ because (spoiler) <strong>CMake is pain in the ass. As always.</strong></p>
 <p>See you soon</p>
 
       </div>
+      <style>
+        form.embeddable-buttondown-form {
+          padding: 15px;
+          max-width: 400px;
+        }
+
+        form.embeddable-buttondown-form label {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: bold;
+        }
+
+        form.embeddable-buttondown-form input[type="email"] {
+          width: 100%;
+          padding: 8px;
+          margin-bottom: 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        }
+
+        form.embeddable-buttondown-form input[type="submit"] {
+          background-color: #007bff;
+          color: white;
+          padding: 10px 15px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+
+        form.embeddable-buttondown-form input[type="submit"]:hover {
+          background-color: #0056b3;
+        }
+
+        form.embeddable-buttondown-form p {
+          margin-top: 10px;
+          font-size: 0.9em;
+        }
+
+        form.embeddable-buttondown-form a {
+          color: #007bff;
+          text-decoration: none;
+        }
+
+        form.embeddable-buttondown-form a:hover {
+          text-decoration: underline;
+        }
+      </style>
+      <div>
+        <h4>SignUp to newsletter</h4>
+        <form
+          action="https://buttondown.com/api/emails/embed-subscribe/0zminDev"
+          method="post"
+          target="popupwindow"
+          onsubmit="window.open('https://buttondown.com/0zminDev', 'popupwindow')"
+          class="embeddable-buttondown-form"
+        >
+          <label for="bd-email">Enter your email</label>
+          <input type="email" name="email" id="bd-email" />
+
+          <input type="submit" value="Subscribe" />
+          <p>
+            <a href="https://buttondown.com/refer/0zminDev" target="_blank">Powered by Buttondown.</a>
+          </p>
+        </form>
+      </div>
 
       <div>
         <script src="https://giscus.app/client.js"
