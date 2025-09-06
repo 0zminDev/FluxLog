@@ -1,0 +1,130 @@
+{{ define "title" }}
+  {{ .Title }} · {{ .Site.Title }}
+{{ end }}
+{{ define "content" }}
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="{{ .Permalink | safeURL }}">
+              {{ .Title }}
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+                {{ .Date | time.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              {{ i18n "reading_time" .ReadingTime }}
+            </span>
+          </div>
+          {{ with .GetTerms "authors" }}{{ partial "taxonomy/authors.html" . }}{{ end }}
+          {{ with .GetTerms "categories" }}{{ partial "taxonomy/categories.html" . }}{{ end }}
+          {{ with .GetTerms "tags" }}{{ partial "taxonomy/tags.html" . }}{{ end }}
+        </div>
+      </header>
+
+      <div class="post-content">
+        {{ if .Params.featuredImage }}
+          <img src="{{ .Params.featuredImage | relURL }}" alt="Featured image"/>
+        {{ end }}
+        {{ .Content }}
+      </div>
+
+      <style>
+        form.embeddable-buttondown-form {
+          padding: 15px;
+          max-width: 400px;
+          background-color: var(--color-background-secondary, #f8f9fa);
+          border-radius: 8px;
+          margin: 20px 0;
+        }
+
+        form.embeddable-buttondown-form label {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: bold;
+          color: var(--color-text, #333);
+        }
+
+        form.embeddable-buttondown-form input[type="email"] {
+          width: 100%;
+          padding: 8px;
+          margin-bottom: 10px;
+          border: 1px solid var(--color-border, #ccc);
+          border-radius: 4px;
+          background-color: var(--color-background, #fff);
+          color: var(--color-text, #333);
+        }
+
+        form.embeddable-buttondown-form input[type="submit"] {
+          background-color: var(--color-accent, #007bff);
+          color: white;
+          padding: 10px 15px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+
+        form.embeddable-buttondown-form input[type="submit"]:hover {
+          background-color: var(--color-accent-hover, #0056b3);
+        }
+
+        form.embeddable-buttondown-form p {
+          margin-top: 10px;
+          font-size: 0.9em;
+          color: var(--color-text-secondary, #666);
+        }
+
+        form.embeddable-buttondown-form a {
+          color: var(--color-accent, #007bff);
+          text-decoration: none;
+        }
+
+        form.embeddable-buttondown-form a:hover {
+          text-decoration: underline;
+        }
+      </style>
+
+      <div>
+        <h4>📧 Subscribe to Newsletter</h4>
+        <form
+          action="https://buttondown.com/api/emails/embed-subscribe/0zminDev"
+          method="post"
+          target="popupwindow"
+          onsubmit="window.open('https://buttondown.com/0zminDev', 'popupwindow')"
+          class="embeddable-buttondown-form"
+        >
+          <label for="bd-email">Enter your email to get notified about new posts</label>
+          <input type="email" name="email" id="bd-email" required />
+
+          <input type="submit" value="Subscribe" />
+          <p>
+            <a href="https://buttondown.com/refer/0zminDev" target="_blank">Powered by Buttondown.</a>
+          </p>
+        </form>
+      </div>
+
+      <footer>
+        {{ partial "posts/series.html" . }}
+        {{ partial "posts/disqus.html" . }}
+        {{ partial "posts/commento.html" . }}
+        {{ partial "posts/utterances.html" . }}
+        {{ partial "posts/giscus.html" . }}
+        {{ partial "posts/mastodon.html" . }}
+        {{ partial "posts/telegram.html" . }}
+        {{ partial "posts/cusdis.html" . }}
+      </footer>
+    </article>
+
+    {{ partial "posts/math.html" . }}
+  </section>
+{{ end }}
