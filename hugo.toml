@@ -1,4 +1,4 @@
-baseurl = "http://www.example.com"
+baseurl = "https://0zminDev.github.io/FluxLog/"
 title = "FluxLog"
 theme = "coder"
 languagecode = "en"
