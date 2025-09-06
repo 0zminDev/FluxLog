@@ -207,46 +207,55 @@ because (spoiler) <strong>CMake is pain in the ass. As always.</strong></p>
 <p>See you soon</p>
 
       </div>
+
       <style>
         form.embeddable-buttondown-form {
           padding: 15px;
           max-width: 400px;
+          background-color: var(--color-background-secondary, #f8f9fa);
+          border-radius: 8px;
+          margin: 20px 0;
         }
 
         form.embeddable-buttondown-form label {
           display: block;
           margin-bottom: 5px;
           font-weight: bold;
+          color: var(--color-text, #333);
         }
 
         form.embeddable-buttondown-form input[type="email"] {
           width: 100%;
           padding: 8px;
           margin-bottom: 10px;
-          border: 1px solid #ccc;
+          border: 1px solid var(--color-border, #ccc);
           border-radius: 4px;
+          background-color: var(--color-background, #fff);
+          color: var(--color-text, #333);
         }
 
         form.embeddable-buttondown-form input[type="submit"] {
-          background-color: #007bff;
+          background-color: var(--color-accent, #007bff);
           color: white;
           padding: 10px 15px;
           border: none;
           border-radius: 4px;
           cursor: pointer;
+          transition: background-color 0.3s ease;
         }
 
         form.embeddable-buttondown-form input[type="submit"]:hover {
-          background-color: #0056b3;
+          background-color: var(--color-accent-hover, #0056b3);
         }
 
         form.embeddable-buttondown-form p {
           margin-top: 10px;
           font-size: 0.9em;
+          color: var(--color-text-secondary, #666);
         }
 
         form.embeddable-buttondown-form a {
-          color: #007bff;
+          color: var(--color-accent, #007bff);
           text-decoration: none;
         }
 
@@ -254,8 +263,9 @@ because (spoiler) <strong>CMake is pain in the ass. As always.</strong></p>
           text-decoration: underline;
         }
       </style>
+
       <div>
-        <h4>SignUp to newsletter</h4>
+        <h4>📧 Subscribe to Newsletter</h4>
         <form
           action="https://buttondown.com/api/emails/embed-subscribe/0zminDev"
           method="post"
@@ -263,33 +273,14 @@ because (spoiler) <strong>CMake is pain in the ass. As always.</strong></p>
           onsubmit="window.open('https://buttondown.com/0zminDev', 'popupwindow')"
           class="embeddable-buttondown-form"
         >
-          <label for="bd-email">Enter your email</label>
-          <input type="email" name="email" id="bd-email" />
+          <label for="bd-email">Enter your email to get notified about new posts</label>
+          <input type="email" name="email" id="bd-email" required />
 
           <input type="submit" value="Subscribe" />
           <p>
             <a href="https://buttondown.com/refer/0zminDev" target="_blank">Powered by Buttondown.</a>
           </p>
         </form>
-      </div>
-
-      <div>
-        <script src="https://giscus.app/client.js"
-          data-repo="0zminDev/FluxLog"
-          data-repo-id="R_kgDOPq1iHA"
-          data-category="Q&A"
-          data-category-id="DIC_kwDOPq1iHM4CvCcr"
-          data-mapping="pathname"
-          data-strict="0"
-          data-reactions-enabled="1"
-          data-emit-metadata="1"
-          data-input-position="top"
-          data-theme="noborder_dark"
-          data-lang="en"
-          data-loading="lazy"
-          crossorigin="anonymous"
-          async>
-        </script>
       </div>
 
       <footer>
