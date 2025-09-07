@@ -2,23 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.fluxengine.dev/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2025-09-06T10:31:53+02:00</lastmod>
   </url><url>
-    <loc>https://www.fluxengine.dev/posts/its-all-c-afterall/</loc>
+    <loc>http://localhost:1313/posts/its-all-c-afterall/</loc>
     <lastmod>2025-09-06T10:31:53+02:00</lastmod>
   </url><url>
-    <loc>https://www.fluxengine.dev/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2025-09-06T10:31:53+02:00</lastmod>
   </url><url>
-    <loc>https://www.fluxengine.dev/posts/engines-are-like-ogres/</loc>
+    <loc>http://localhost:1313/authors/</loc>
   </url><url>
-    <loc>https://www.fluxengine.dev/authors/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>https://www.fluxengine.dev/categories/</loc>
+    <loc>http://localhost:1313/series/</loc>
   </url><url>
-    <loc>https://www.fluxengine.dev/series/</loc>
-  </url><url>
-    <loc>https://www.fluxengine.dev/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>

@@ -1,4 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  It&#39;s All C afterall · FluxLog
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
 
 
-<script data-goatcounter="https://0zmindev.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+
+
+<meta name="author" content="0zminDev">
+<meta name="description" content="
+In the beginning, there was chaos…
+… and from this chaos emerged a whole bunch of wrong decisions, mistakes, and failures that eventually turned into FluxEngine.
+In this blog, I’m going to show how a simple intern managed to start creating an engine… instead of accidentally deleting the production DB.
+I&rsquo;ve always wanted to build a game engine,
+so all the dudes on the internet telling me “build games, not game engines”… well, they sucked for me.">
+<meta name="keywords" content="blog,game-engine">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="It&#39;s All C afterall">
+  <meta name="twitter:description" content="In the beginning, there was chaos…
+… and from this chaos emerged a whole bunch of wrong decisions, mistakes, and failures that eventually turned into FluxEngine.
+In this blog, I’m going to show how a simple intern managed to start creating an engine… instead of accidentally deleting the production DB.
+I’ve always wanted to build a game engine,
+so all the dudes on the internet telling me “build games, not game engines”… well, they sucked for me.">
+
+<meta property="og:url" content="http://localhost:1313/posts/its-all-c-afterall/">
+  <meta property="og:site_name" content="FluxLog">
+  <meta property="og:title" content="It&#39;s All C afterall">
+  <meta property="og:description" content="In the beginning, there was chaos…
+… and from this chaos emerged a whole bunch of wrong decisions, mistakes, and failures that eventually turned into FluxEngine.
+In this blog, I’m going to show how a simple intern managed to start creating an engine… instead of accidentally deleting the production DB.
+I’ve always wanted to build a game engine,
+so all the dudes on the internet telling me “build games, not game engines”… well, they sucked for me.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-09-06T10:31:53+02:00">
+    <meta property="article:modified_time" content="2025-09-06T10:31:53+02:00">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/posts/its-all-c-afterall/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      FluxLog
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/posts/its-all-c-afterall/">
+              It&#39;s All C afterall
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2025-09-06T10:31:53&#43;02:00">
+                September 6, 2025
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              3-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <blockquote>
+<p>In the beginning, there was chaos…</p></blockquote>
+<p>… and from this chaos emerged a whole bunch of wrong decisions, mistakes, and failures that eventually turned into FluxEngine.</p>
+<p>In this blog, I’m going to show how a simple intern managed to start creating an engine… instead of accidentally deleting the production DB.</p>
+<p>I&rsquo;ve always wanted to build a game engine,<br>
+so all the dudes on the internet telling me <em>“build games, not game engines”</em>… well, they sucked for me.</p>
+<p>Game engine architecture is clear, complex, and looks <strong>sexy af</strong>.<br>
+Meanwhile, game code looks by definition like <strong>spaghetti on top of more spaghetti</strong>.</p>
+<p>It’s not the developers’ fault – sometimes art requires moving your code into the hacky realm of quick fixes and rewrites on demand.</p>
+<p>The engine, however, is the place for the technologically gifted (or introverted enough to spend all their life in front of a PC).</p>
+<p>And game engine code is the one place where <strong>no designer or artist can hurt you</strong>.</p>
+<hr>
+<p>The first very important question I had to solve was: <strong>what language am I going to use?</strong></p>
+<p>So I did the worst thing you can do in that position – I asked Reddit.<br>
+Oh boy. If only I knew what kind of mistake that was.</p>
+<p>The replies flooded in like a tidal wave of unsolicited, contradictory advice. One comment thread devolved into a 50-reply argument about memory safety. Another was just a single, cryptic message: &ldquo;Have you considered Lisp?&rdquo; A chorus of users ignored the question entirely to tell me I should be building games, not engines, and that I was wasting my life. For every helpful suggestion, there were three pedantic corrections about my terminology and five people recommending their obscure pet language that has 12 stars on GitHub.</p>
+<p><img src="/images/openheimer.png" alt="Me after posting the question"><br>
+<em>Me after posting the question</em></p>
+<p>Ok, but let’s cut the crap. After a couple of minutes, I had a list of candidates:</p>
+<ol>
+<li><strong>C</strong> – almighty C, some say it can compile on a potato. Very verbose and ideal in its own way. The problem? It’s <em>too</em> simple. For some that’s a plus, but I wanted to learn new stuff. Also, my previous game engine attempt was already in C, so I wanted something else.</li>
+<li><strong>Zig</strong> – another great possibility. The trendy, modern, safe low-level kid on the block. But it’s not stable. Even tiny version bumps break the build system and core concepts entirely. Not something I want for a long-term project.</li>
+<li><strong>Odin</strong> – yet another new kid. I haven’t tried it (yet), but it’s compiled with a C ABI, so in theory it’s more stable than Zig. Supposedly “finished” too, at least according to its author. Maybe one day.</li>
+<li><strong>Rust</strong> – my second failed attempt. I tried to learn it, but stopped when I discovered (maybe mistakenly) that making static libs or DLLs requires going through C. My thought was: if in the end it’s all C anyway, what’s the point?</li>
+<li><strong>C++</strong> – last but not least. Basically C with extra toys. My plan: use C-style C++ for the low-level guts, and modern C++ for the abstract stuff. I actually built an engine in C++ back in middle school, on OpenGL. I didn’t know what I was doing, but hey – this time I’ve got Vulkan.</li>
+</ol>
+<hr>
+<p>So yeah, after all the drama, I went with <strong>C++</strong>.<br>
+Because in the end… <strong>everything is C anyway.</strong></p>
+<p><img src="/images/itsallc.png" alt="It&rsquo;s all C"></p>
+<p>Next time I’ll talk about actually setting up the damn project,<br>
+because (spoiler) <strong>CMake is pain in the ass. As always.</strong></p>
+<p>See you soon</p>
+
+      </div>
+
+      <style>
+        form.embeddable-buttondown-form {
+          padding: 15px;
+          max-width: 400px;
+          margin: 20px 0;
+        }
+
+        form.embeddable-buttondown-form label {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: bold;
+          color: var(--color-text, #fff);
+        }
+
+        form.embeddable-buttondown-form input[type="email"] {
+          width: 100%;
+          padding: 8px;
+          margin-bottom: 10px;
+          border: 1px solid var(--color-border, #ccc);
+          border-radius: 4px;
+          color: var(--color-text, #fff);
+        }
+
+        form.embeddable-buttondown-form input[type="submit"] {
+          background-color: var(--color-accent, #007bff);
+          color: white;
+          padding: 10px 15px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+
+        form.embeddable-buttondown-form input[type="submit"]:hover {
+          background-color: var(--color-accent-hover, #0056b3);
+        }
+
+        form.embeddable-buttondown-form p {
+          margin-top: 10px;
+          font-size: 0.9em;
+          color: var(--color-text-secondary, #666);
+        }
+
+        form.embeddable-buttondown-form a {
+          color: var(--color-accent, #007bff);
+          text-decoration: none;
+        }
+
+        form.embeddable-buttondown-form a:hover {
+          text-decoration: underline;
+        }
+      </style>
+
+      <div>
+        <h4>📧 Subscribe to Newsletter</h4>
+        <form
+          action="https://buttondown.com/api/emails/embed-subscribe/0zminDev"
+          method="post"
+          target="popupwindow"
+          onsubmit="window.open('https://buttondown.com/0zminDev', 'popupwindow')"
+          class="embeddable-buttondown-form"
+        >
+          <label for="bd-email">Enter your email to get notified about new posts</label>
+          <input type="email" name="email" id="bd-email" required />
+
+          <input type="submit" value="Subscribe" />
+          <p>
+            <a href="https://buttondown.com/refer/0zminDev" target="_blank">Powered by Buttondown.</a>
+          </p>
+        </form>
+      </div>
+
+      <footer>
+        
+
+
+        
+        
+        
+        <div class="comments">
+    <script>
+  
+    let getTheme = window.localStorage && window.localStorage.getItem("colorscheme");
+  
+    getTheme = getTheme == null ? 'preferred_color_scheme' : getTheme;
+    
+    let s = document.createElement('script');
+    s.src = 'https://giscus.app/client.js';
+    s.setAttribute('data-repo', '0zminDev\/FluxLog');
+    s.setAttribute('data-repo-id', 'R_kgDOPq1iHA');
+    s.setAttribute('data-category', 'Q\u0026A');
+    s.setAttribute('data-category-id', 'DIC_kwDOPq1iHM4CvCcr');
+    s.setAttribute('data-mapping', 'pathname');
+    s.setAttribute('data-term', '');
+    s.setAttribute('data-strict', '0');
+    s.setAttribute('data-reactions-enabled', '1');
+    s.setAttribute('data-emit-metadata', '0');
+    s.setAttribute('data-input-position', 'top');
+    s.setAttribute('data-theme', getTheme);
+    s.setAttribute('data-lang', 'en');
+    s.setAttribute('data-loading', 'lazy');
+    s.setAttribute('crossorigin', 'anonymous');
+    s.setAttribute('async', '');
+    document.querySelector('div.comments').innerHTML = '';
+    document.querySelector('div.comments').appendChild(s);
+  
+    </script>
+    </div>
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2025
+     0zminDev 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>
