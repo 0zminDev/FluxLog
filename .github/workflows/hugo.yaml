@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - master
+  schedule:
+    - cron: '0 12 * * 6'  # Every Saturday at 12:00 PM UTC
   workflow_dispatch:
 permissions:
   contents: read
