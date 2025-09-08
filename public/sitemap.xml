@@ -2,21 +2,86 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.fluxengine.dev/</loc>
-    <lastmod>2025-09-06T10:31:53+02:00</lastmod>
+    <loc>https://www.fluxengine.dev/categories/about/</loc>
+    <lastmod>2025-09-08T10:00:00+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>https://www.fluxengine.dev/posts/its-all-c-afterall/</loc>
-    <lastmod>2025-09-06T10:31:53+02:00</lastmod>
+    <loc>https://www.fluxengine.dev/tags/about/</loc>
+    <lastmod>2025-09-08T10:00:00+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>https://www.fluxengine.dev/posts/</loc>
-    <lastmod>2025-09-06T10:31:53+02:00</lastmod>
-  </url><url>
-    <loc>https://www.fluxengine.dev/authors/</loc>
+    <loc>https://www.fluxengine.dev/about/</loc>
+    <lastmod>2025-09-08T10:00:00+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>https://www.fluxengine.dev/categories/</loc>
+    <lastmod>2025-09-08T10:00:00+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>https://www.fluxengine.dev/series/</loc>
+    <loc>https://www.fluxengine.dev/</loc>
+    <lastmod>2025-09-08T10:00:00+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://www.fluxengine.dev/tags/game-engine/</loc>
+    <lastmod>2025-09-08T10:00:00+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>https://www.fluxengine.dev/tags/</loc>
+    <lastmod>2025-09-08T10:00:00+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://www.fluxengine.dev/tags/c&#43;&#43;/</loc>
+    <lastmod>2025-09-06T19:24:17+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://www.fluxengine.dev/categories/development/</loc>
+    <lastmod>2025-09-06T19:24:17+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://www.fluxengine.dev/categories/game-engine/</loc>
+    <lastmod>2025-09-06T19:24:17+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://www.fluxengine.dev/posts/its-all-c-afterall/</loc>
+    <lastmod>2025-09-06T19:24:17+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://www.fluxengine.dev/posts/</loc>
+    <lastmod>2025-09-06T19:24:17+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://www.fluxengine.dev/tags/programming/</loc>
+    <lastmod>2025-09-06T19:24:17+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://www.fluxengine.dev/tags/vulkan/</loc>
+    <lastmod>2025-09-06T19:24:17+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://www.fluxengine.dev/authors/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://www.fluxengine.dev/404/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://www.fluxengine.dev/series/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>

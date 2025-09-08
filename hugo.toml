@@ -4,6 +4,17 @@ theme = "coder"
 languagecode = "en"
 defaultcontentlanguage = "en"
 
+# SEO Configuration
+enableRobotsTXT = true
+enableGitInfo = true
+enableEmoji = true
+
+# Sitemap Configuration
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
 
 [pagination]
 pagerSize = 20
@@ -35,9 +46,23 @@ style = "github-dark"
   author = "0zminDev"
   info = "FluxEngine - A simple game engine written in C++ and Vulkan"
   description = "FluxEngine - A simple game engine written in C++ and Vulkan"
-  keywords = "blog,game-engine"
+  keywords = "blog,game-engine,cpp,vulkan,graphics-programming,software-development,indie-dev"
   avatarurl = "images/avatar.png"
 
+  # SEO Enhancement
+  twitter = "0zminDev"
+  github = "0zminDev"
+  linkedin = ""
+  images = ["images/avatar.png"]
+  
+  # Open Graph / Twitter Cards
+  enableOpenGraph = true
+  enableTwitterCards = true
+  
+  # Enhanced SEO metadata
+  siteType = "website"
+  locale = "en_US"
+  
   faviconSVG = "/images/favicon.svg"
   favicon_32 = "/images/favicon-32x32.png"
   favicon_16 = "/images/favicon-16x16.png"
@@ -71,6 +96,11 @@ style = "github-dark"
   name = "Blog"
   weight = 1
   url  = "posts/"
+
+[[menu.main]]
+  name = "About"
+  weight = 2
+  url = "about/"
 
 [caches]
   [caches.images]

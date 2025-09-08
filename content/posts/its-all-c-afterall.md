@@ -2,6 +2,12 @@
 date = '2025-09-06T10:31:53+02:00'
 draft = false
 title = "It's All C afterall"
+description = "A journey through programming languages for game engine development - why I chose C++ over Rust, Zig, and other alternatives for building FluxEngine."
+keywords = ["c++", "game-engine", "programming-languages", "rust", "zig", "vulkan", "software-development"]
+tags = ["c++", "game-engine", "programming", "vulkan"]
+categories = ["development", "game-engine"]
+author = "0zminDev"
+image = "/images/itsallc.png"
 +++
 
 > In the beginning, there was chaos…

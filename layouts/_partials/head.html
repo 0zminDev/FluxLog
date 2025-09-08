@@ -6,6 +6,80 @@
 <link rel="canonical" href="{{ .Permalink }}">
 {{ end }}
 
+<!-- Enhanced SEO Meta Tags -->
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+<meta name="language" content="{{ .Site.Language.Lang }}">
+<meta name="revisit-after" content="7 days">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:title" content="{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}">
+<meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta property="og:image" content="{{ if .Params.image }}{{ .Params.image | absURL }}{{ else }}{{ index .Site.Params.images 0 | absURL }}{{ end }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:locale" content="{{ .Site.Params.locale | default "en_US" }}">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="{{ .Permalink }}">
+<meta name="twitter:title" content="{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}">
+<meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta name="twitter:image" content="{{ if .Params.image }}{{ .Params.image | absURL }}{{ else }}{{ index .Site.Params.images 0 | absURL }}{{ end }}">
+{{ with .Site.Params.twitter }}<meta name="twitter:creator" content="@{{ . }}">{{ end }}
+
+<!-- Article specific meta tags -->
+{{ if .IsPage }}
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+<meta property="article:author" content="{{ .Params.author | default .Site.Params.author }}">
+{{ with .GetTerms "tags" }}
+  {{ range . }}
+<meta property="article:tag" content="{{ .Title }}">
+  {{ end }}
+{{ end }}
+{{ with .GetTerms "categories" }}
+  {{ range . }}
+<meta property="article:section" content="{{ .Title }}">
+  {{ end }}
+{{ end }}
+{{ end }}
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "{{ if .IsPage }}BlogPosting{{ else }}WebSite{{ end }}",
+  "headline": "{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}",
+  "description": "{{ if .Description }}{{ .Description }}{{ else if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}",
+  "url": "{{ .Permalink }}",
+  {{ if .IsPage }}
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+  "wordCount": {{ .WordCount }},
+  {{ end }}
+  "author": {
+    "@type": "Person",
+    "name": "{{ .Site.Params.author }}",
+    "url": "{{ .Site.BaseURL }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ .Site.Title }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ index .Site.Params.images 0 | absURL }}"
+    }
+  },
+  "image": "{{ if .Params.image }}{{ .Params.image | absURL }}{{ else }}{{ index .Site.Params.images 0 | absURL }}{{ end }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  }
+}
+</script>
+
 {{ partialCached "head/theme-styles.html" . }}
 
 {{ partialCached "head/color-scheme.html" . }}

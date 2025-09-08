@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About on FluxLog</title>
+    <link>https://www.fluxengine.dev/tags/about/</link>
+    <description>Recent content in About on FluxLog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 08 Sep 2025 10:00:00 +0200</lastBuildDate>
+    <atom:link href="https://www.fluxengine.dev/tags/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About FluxEngine Development</title>
+      <link>https://www.fluxengine.dev/about/</link>
+      <pubDate>Mon, 08 Sep 2025 10:00:00 +0200</pubDate>
+      <guid>https://www.fluxengine.dev/about/</guid>
+      <description>&lt;h2 id=&#34;about-fluxengine&#34;&gt;&#xD;&#xA;  About FluxEngine&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#about-fluxengine&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Welcome to FluxLog, the development blog documenting the creation of &lt;strong&gt;FluxEngine&lt;/strong&gt; - a modern game engine built from scratch using C++ and Vulkan.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-is-fluxengine&#34;&gt;&#xD;&#xA;  What is FluxEngine?&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#what-is-fluxengine&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;FluxEngine is an ambitious indie game engine project that aims to:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Provide a modern, efficient graphics pipeline using Vulkan&lt;/li&gt;&#xA;&lt;li&gt;Implement clean, maintainable C++ architecture&lt;/li&gt;&#xA;&lt;li&gt;Support cross-platform development&lt;/li&gt;&#xA;&lt;li&gt;Offer powerful tools for indie game developers&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;the-journey&#34;&gt;&#xD;&#xA;  The Journey&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#the-journey&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;This blog chronicles the entire development process, from initial language selection debates to complex graphics programming challenges. You&amp;rsquo;ll find:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

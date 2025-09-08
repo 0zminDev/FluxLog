@@ -6,6 +6,42 @@
     <description>Recent content in Tags on FluxLog</description>
     <generator>Hugo</generator>
     <language>en</language>
+    <lastBuildDate>Mon, 08 Sep 2025 10:00:00 +0200</lastBuildDate>
     <atom:link href="https://www.fluxengine.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://www.fluxengine.dev/tags/about/</link>
+      <pubDate>Mon, 08 Sep 2025 10:00:00 +0200</pubDate>
+      <guid>https://www.fluxengine.dev/tags/about/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Game-Engine</title>
+      <link>https://www.fluxengine.dev/tags/game-engine/</link>
+      <pubDate>Mon, 08 Sep 2025 10:00:00 +0200</pubDate>
+      <guid>https://www.fluxengine.dev/tags/game-engine/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>https://www.fluxengine.dev/tags/c&#43;&#43;/</link>
+      <pubDate>Sat, 06 Sep 2025 10:31:53 +0200</pubDate>
+      <guid>https://www.fluxengine.dev/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programming</title>
+      <link>https://www.fluxengine.dev/tags/programming/</link>
+      <pubDate>Sat, 06 Sep 2025 10:31:53 +0200</pubDate>
+      <guid>https://www.fluxengine.dev/tags/programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vulkan</title>
+      <link>https://www.fluxengine.dev/tags/vulkan/</link>
+      <pubDate>Sat, 06 Sep 2025 10:31:53 +0200</pubDate>
+      <guid>https://www.fluxengine.dev/tags/vulkan/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
