@@ -1,7 +1,7 @@
 +++ 
 draft = true
 date = 2025-09-08T21:36:43+02:00
-title = "C++ Build Systems Are Programming Hell"
+title = "Choosing Your Poison: The C++ Build System Saga"
 description = "A deep dive into the nightmare that is C++ build systems - from CMake to Bazel, and why setting up a modern C++ project makes you question your life choices."
 slug = "cpp-build-system-is-programming-hell"
 authors = ["0zminDev"]
@@ -9,7 +9,7 @@ tags = ["c++", "cmake", "build-systems", "programming", "game-engine"]
 categories = ["development", "game-engine"]
 externalLink = ""
 series = []
-keywords = ["c++", "cmake", "build-systems", "compilation", "make", "ninja", "bazel"]
+keywords = ["c++", "cmake", "build-systems", "compilation", "make", "ninja"]
 author = "0zminDev"
 image = "/images/cmake-hell.png"
 +++
