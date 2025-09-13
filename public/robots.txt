@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://www.fluxengine.dev/sitemap.xml
+Sitemap: http://localhost:1313/sitemap.xml
 
 # Disallow certain paths
 Disallow: /private/

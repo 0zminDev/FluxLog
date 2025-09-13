@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  C&#43;&#43; Build Systems Are Programming Hell · FluxLog
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="0zminDev">
+<meta name="description" content="A deep dive into the nightmare that is C&#43;&#43; build systems - from CMake to Bazel, and why setting up a modern C&#43;&#43; project makes you question your life choices.">
+<meta name="keywords" content="c&#43;&#43;, cmake, build-systems, compilation, make, ninja, bazel">
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/images/avatar.png">
+  <meta name="twitter:title" content="C&#43;&#43; Build Systems Are Programming Hell">
+  <meta name="twitter:description" content="A deep dive into the nightmare that is C&#43;&#43; build systems - from CMake to Bazel, and why setting up a modern C&#43;&#43; project makes you question your life choices.">
+
+<meta property="og:url" content="http://localhost:1313/posts/cpp-build-system-is-programming-hell/">
+  <meta property="og:site_name" content="FluxLog">
+  <meta property="og:title" content="C&#43;&#43; Build Systems Are Programming Hell">
+  <meta property="og:description" content="A deep dive into the nightmare that is C&#43;&#43; build systems - from CMake to Bazel, and why setting up a modern C&#43;&#43; project makes you question your life choices.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-09-08T21:36:43+02:00">
+    <meta property="article:modified_time" content="2025-09-08T21:36:43+02:00">
+    <meta property="article:tag" content="C&#43;&#43;">
+    <meta property="article:tag" content="Cmake">
+    <meta property="article:tag" content="Build-Systems">
+    <meta property="article:tag" content="Programming">
+    <meta property="article:tag" content="Game-Engine">
+    <meta property="og:image" content="http://localhost:1313/images/avatar.png">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/posts/cpp-build-system-is-programming-hell/">
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+<meta name="language" content="en">
+<meta name="revisit-after" content="7 days">
+
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://localhost:1313/posts/cpp-build-system-is-programming-hell/">
+<meta property="og:title" content="C&#43;&#43; Build Systems Are Programming Hell">
+<meta property="og:description" content="A deep dive into the nightmare that is C&#43;&#43; build systems - from CMake to Bazel, and why setting up a modern C&#43;&#43; project makes you question your life choices.">
+<meta property="og:image" content="http://localhost:1313/images/cmake-hell.png">
+<meta property="og:site_name" content="FluxLog">
+<meta property="og:locale" content="en_US">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="http://localhost:1313/posts/cpp-build-system-is-programming-hell/">
+<meta name="twitter:title" content="C&#43;&#43; Build Systems Are Programming Hell">
+<meta name="twitter:description" content="A deep dive into the nightmare that is C&#43;&#43; build systems - from CMake to Bazel, and why setting up a modern C&#43;&#43; project makes you question your life choices.">
+<meta name="twitter:image" content="http://localhost:1313/images/cmake-hell.png">
+<meta name="twitter:creator" content="@0zminDev">
+
+
+
+<meta property="article:published_time" content="2025-09-08T21:36:43&#43;02:00">
+<meta property="article:modified_time" content="2025-09-08T21:36:43&#43;02:00">
+<meta property="article:author" content="0zminDev">
+
+  
+<meta property="article:tag" content="C&#43;&#43;">
+  
+<meta property="article:tag" content="Cmake">
+  
+<meta property="article:tag" content="Build-Systems">
+  
+<meta property="article:tag" content="Programming">
+  
+<meta property="article:tag" content="Game-Engine">
+  
+
+
+  
+<meta property="article:section" content="Development">
+  
+<meta property="article:section" content="Game-Engine">
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "C\u002b\u002b Build Systems Are Programming Hell",
+  "description": "A deep dive into the nightmare that is C\u002b\u002b build systems - from CMake to Bazel, and why setting up a modern C\u002b\u002b project makes you question your life choices.",
+  "url": "http:\/\/localhost:1313\/posts\/cpp-build-system-is-programming-hell\/",
+  
+  "datePublished": "2025-09-08T21:36:43\u002b02:00",
+  "dateModified": "2025-09-08T21:36:43\u002b02:00",
+  "wordCount":  1169 ,
+  
+  "author": {
+    "@type": "Person",
+    "name": "0zminDev",
+    "url": "http:\/\/localhost:1313\/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "FluxLog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http:\/\/localhost:1313\/images\/avatar.png"
+    }
+  },
+  "image": "http:\/\/localhost:1313\/images\/cmake-hell.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http:\/\/localhost:1313\/posts\/cpp-build-system-is-programming-hell\/"
+  }
+}
+</script>
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+
+<script data-goatcounter="https://0zmindev.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      FluxLog
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/posts/cpp-build-system-is-programming-hell/">
+              C&#43;&#43; Build Systems Are Programming Hell
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2025-09-08T21:36:43&#43;02:00">
+                September 8, 2025
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              6-minute read
+            </span>
+          </div>
+          <div class="authors">
+  <i class="fa-solid fa-user" aria-hidden="true"></i>
+    <a href="/authors/0zmindev/">0zminDev</a></div>
+
+          <div class="categories">
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
+    <a href="/categories/development/">Development</a>
+      <span class="separator">•</span>
+    <a href="/categories/game-engine/">Game-Engine</a></div>
+
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/c&#43;&#43;/">C&#43;&#43;</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/cmake/">Cmake</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/build-systems/">Build-Systems</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/programming/">Programming</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/game-engine/">Game-Engine</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p>Every great human advancement has at least one huge flaw that makes using it a pain in the ass. For space travel, it&rsquo;s <strong>cosmic radiation</strong>. For the internet, it&rsquo;s <strong>Twitter</strong>. And for C++, it&rsquo;s the <strong>build system</strong>.</p>
+<blockquote>
+<p><em>&ldquo;Choosing C++ is easy. Setting up the build system is where souls go to die.&rdquo;</em></p></blockquote>
+<p>In the previous post, I talked about my language of choice. I landed on C++ for a couple of reasons (which you can find and criticize there). But I knew that choosing a C-style language came with a tradeoff, a devil&rsquo;s bargain sealed in the 1970s: <strong>the build system</strong>.</p>
+<p>You see, along the years we&rsquo;ve seen many great approaches to building stuff. But C++ build systems? They still feel like they were designed to <strong>punish you</strong>. I&rsquo;m making fun of it, but in the 70s, it was probably groundbreaking. Well, it isn&rsquo;t 1970 anymore, and the whole process has started to get a little&hellip; <em>stinky</em>.</p>
+<p>There&rsquo;s a new wave of C-style build tools trying to break the old rust off the topic, but they all wrestle with the original sin of C: <strong>header files</strong>.</p>
+<p>It&rsquo;s a great idea on paper—seeing the definition of a class in a neat <code>.h</code> file. But as we&rsquo;ll discuss, most, if not all, of C-style coding sins come from the beautiful, terrible, and absolutely necessary evil that is the <strong>header file</strong>.</p>
+<p>Of course, this won&rsquo;t stop me. I use <strong>JavaScript</strong> in my professional work, after all. I&rsquo;m a savage. But when planning a huge-ass project like <strong>FluxEngine</strong>, it&rsquo;s important to discuss the possibilities and why I chose one over the other.</p>
+<p><strong>Fair warning</strong>: This post will probably have a sequel. While learning stuff for this article, I started having second thoughts about my own approach. And I&rsquo;ve decided if I&rsquo;m going to pivot, it&rsquo;s better to do it <em>now</em> than when the project is a tangled mess of dependencies.</p>
+<p>So, for now, I&rsquo;m going to discuss the options out there. I&rsquo;ll tell you what I chose, and why I&rsquo;m already thinking about changing it.</p>
+<p>With that cleared up, let&rsquo;s dive into the wonderful, horrifying world of C/C++ build tools.</p>
+<hr>
+<hr>
+<h2 id="the-sigma-option-just-write-a-shell-script">
+  The Sigma Option: Just Write a Shell Script
+  <a class="heading-link" href="#the-sigma-option-just-write-a-shell-script">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Before we talk about all the fancy third-party systems, we need to address the elephant in the room—the <strong>DIY approach</strong>.</p>
+<p>You think you&rsquo;re smarter than decades of tool development? You think you can outsmart the experts? Well, you can just write a shell script (<code>build.sh</code> or <code>build.bat</code>) that calls the compiler directly with all your files and flags.</p>
+<h3 id="the-pros">
+  The Pros
+  <a class="heading-link" href="#the-pros">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>You have <strong>absolute, god-tier control</strong></li>
+<li>No extra dependencies. Just you, your code, and the compiler</li>
+<li>It&rsquo;s simple and straightforward</li>
+</ul>
+<h3 id="the-cons">
+  The Cons
+  <a class="heading-link" href="#the-cons">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>It&rsquo;s not cross-platform unless you want to maintain scripts for every OS</li>
+<li><strong>No incremental builds</strong>. You change one line and recompile the entire universe. Forget a semicolon? Compile it all again, idiot</li>
+<li>It requires competence and experience, two words I&rsquo;m not entirely familiar with yet</li>
+</ul>
+<p>So yeah, I&rsquo;m sticking to third-party solutions for now.</p>
+<hr>
+<h2 id="the-workers-vs-the-managers">
+  The Workers vs. The Managers
+  <a class="heading-link" href="#the-workers-vs-the-managers">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>In the world of C++ builds, there&rsquo;s a clear divide. Think of it like a factory floor. You have the <strong>workers</strong> who actually operate the machinery, and you have the <strong>managers</strong> who tell them what to do.</p>
+<h3 id="the-workers-build-systems">
+  The Workers (Build Systems)
+  <a class="heading-link" href="#the-workers-build-systems">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>These are the tools that actually do the building. They take a set of instructions, figure out which files have changed, and then run the preprocessor, compiler, and linker. Their main job is to be fast and efficient at the actual &ldquo;make my 1s and 0s&rdquo; part.</p>
+<ul>
+<li>
+<p><strong>Make</strong>: The OG. The grizzled veteran of build systems. Legend says your father built his code using Make, and his father before him. It&rsquo;s old, reliable, and everywhere. It reads Makefiles, which have a syntax that feels like a cryptic incantation.</p>
+</li>
+<li>
+<p><strong>Ninja</strong>: The new kid on the block, and my current favorite. Ninja is <em>FAST</em>. Its whole philosophy is to be a &ldquo;small build system with a focus on speed.&rdquo; It&rsquo;s not meant to be written by hand. It&rsquo;s designed to be the target for a meta-build system. You don&rsquo;t write Ninja files; you generate them.</p>
+</li>
+<li>
+<p><strong>NMake</strong>: The Microsoft solution. It&rsquo;s&hellip; there. If you&rsquo;re deep in the Visual Studio ecosystem, you&rsquo;ll encounter it. But hence its stinky Microsoft nature, I&rsquo;m going to not talk about it.</p>
+</li>
+</ul>
+<h3 id="the-managers-meta-build-systems">
+  The Managers (Meta-Build Systems)
+  <a class="heading-link" href="#the-managers-meta-build-systems">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The workers are great, but you don&rsquo;t want to be writing their instructions by hand for a project on Windows, macOS, and Linux. That&rsquo;s where the managers come in. They are called <strong>meta-build systems</strong> because they don&rsquo;t build anything themselves. Instead, they generate the project files (Makefiles, Ninja files, Visual Studio solutions, etc.) for the workers.</p>
+<p>They handle the cross-platform shit, find libraries on your system, and let you define your project in a higher-level language. They are both easier <em>and</em> harder to write than a raw Makefile. Weird, I know.</p>
+<ul>
+<li>
+<p><strong>CMake</strong>: The undisputed king. The industry-standard pain in the ass. It&rsquo;s powerful, it supports everything under the sun, and almost every C++ library in existence has a <code>CMakeLists.txt</code> file. The problem? Its scripting language was designed by someone who either hated developers or was a time-traveler from the 1980s. The learning curve isn&rsquo;t a curve; it&rsquo;s a vertical cliff face with angry goats throwing rocks at you.</p>
+</li>
+<li>
+<p><strong>Meson</strong>: A modern, sane alternative to CMake. It uses a simple, Python-like syntax and is designed to be user-friendly and fast. It almost always pairs with Ninja. It&rsquo;s gaining a lot of traction, and frankly, it&rsquo;s looking pretty damn good.</p>
+</li>
+<li>
+<p><strong>Premake</strong>: Another popular alternative, especially in the game dev world. It uses Lua for its scripting, which is a big plus for many game developers who are already familiar with it. It&rsquo;s simpler than CMake but very capable.</p>
+</li>
+</ul>
+<hr>
+<h2 id="my-choice-and-my-regret">
+  My Choice (And My Regret)
+  <a class="heading-link" href="#my-choice-and-my-regret">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>So, after staring into the abyss, what did I choose?</p>
+<h3 id="i-went-with-cmake--ninja">
+  I went with <strong>CMake + Ninja</strong>
+  <a class="heading-link" href="#i-went-with-cmake--ninja">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p><strong>Why?</strong> Because despite its horrifying syntax, CMake is the devil I know. It&rsquo;s the <em>standard</em>. When I need to pull in a library like Vulkan, glfw, or glm, I know there&rsquo;s a 99% chance it has robust CMake support. Using it feels like the &ldquo;responsible adult&rdquo; choice. And pairing it with Ninja means my actual builds are blazing fast.</p>
+<p>But as I was writing this, a thought started creeping in. A little voice whispering&hellip;</p>
+<blockquote>
+<p><em>&ldquo;You could just use Meson. It&rsquo;s so much cleaner. Think of the time you&rsquo;d save. Think of your sanity.&rdquo;</em></p></blockquote>
+<p>And damn it, <strong>that voice has a point</strong>. The project is still young. If I&rsquo;m going to make a change, now is the time.</p>
+<p>So the next post might just be a story about changing the build system in the middle of development. Or maybe not, if the process is surprisingly easy (which I&rsquo;m doubtful of).</p>
+<p>For now, the plan is to stick with <strong>CMake</strong>. But it&rsquo;s on thin ice.</p>
+<hr>
+<p><em>See you soon.</em></p>
+
+      </div>
+
+      <style>
+        form.embeddable-buttondown-form {
+          padding: 15px;
+          max-width: 400px;
+          margin: 20px 0;
+        }
+
+        form.embeddable-buttondown-form label {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: bold;
+          color: var(--color-text, #fff);
+        }
+
+        form.embeddable-buttondown-form input[type="email"] {
+          width: 100%;
+          padding: 8px;
+          margin-bottom: 10px;
+          border: 1px solid var(--color-border, #ccc);
+          border-radius: 4px;
+          color: var(--color-text, #fff);
+        }
+
+        form.embeddable-buttondown-form input[type="submit"] {
+          background-color: var(--color-accent, #007bff);
+          color: white;
+          padding: 10px 15px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+
+        form.embeddable-buttondown-form input[type="submit"]:hover {
+          background-color: var(--color-accent-hover, #0056b3);
+        }
+
+        form.embeddable-buttondown-form p {
+          margin-top: 10px;
+          font-size: 0.9em;
+          color: var(--color-text-secondary, #666);
+        }
+
+        form.embeddable-buttondown-form a {
+          color: var(--color-accent, #007bff);
+          text-decoration: none;
+        }
+
+        form.embeddable-buttondown-form a:hover {
+          text-decoration: underline;
+        }
+      </style>
+
+      <div>
+        <h4>📧 Subscribe to Newsletter</h4>
+        <form
+          action="https://buttondown.com/api/emails/embed-subscribe/0zminDev"
+          method="post"
+          target="popupwindow"
+          onsubmit="window.open('https://buttondown.com/0zminDev', 'popupwindow')"
+          class="embeddable-buttondown-form"
+        >
+          <label for="bd-email">Enter your email to get notified about new posts</label>
+          <input type="email" name="email" id="bd-email" required />
+
+          <input type="submit" value="Subscribe" />
+          <p>
+            <a href="https://buttondown.com/refer/0zminDev" target="_blank">Powered by Buttondown.</a>
+          </p>
+        </form>
+      </div>
+
+      <footer>
+        
+
+
+        
+        
+        
+        <div class="comments">
+    <script>
+  
+    let getTheme = window.localStorage && window.localStorage.getItem("colorscheme");
+  
+    getTheme = getTheme == null ? 'preferred_color_scheme' : getTheme;
+    
+    let s = document.createElement('script');
+    s.src = 'https://giscus.app/client.js';
+    s.setAttribute('data-repo', '0zminDev\/FluxLog');
+    s.setAttribute('data-repo-id', 'R_kgDOPq1iHA');
+    s.setAttribute('data-category', 'Q\u0026A');
+    s.setAttribute('data-category-id', 'DIC_kwDOPq1iHM4CvCcr');
+    s.setAttribute('data-mapping', 'pathname');
+    s.setAttribute('data-term', '');
+    s.setAttribute('data-strict', '0');
+    s.setAttribute('data-reactions-enabled', '1');
+    s.setAttribute('data-emit-metadata', '0');
+    s.setAttribute('data-input-position', 'top');
+    s.setAttribute('data-theme', getTheme);
+    s.setAttribute('data-lang', 'en');
+    s.setAttribute('data-loading', 'lazy');
+    s.setAttribute('crossorigin', 'anonymous');
+    s.setAttribute('async', '');
+    document.querySelector('div.comments').innerHTML = '';
+    document.querySelector('div.comments').appendChild(s);
+  
+    </script>
+    </div>
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2025
+     0zminDev 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

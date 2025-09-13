@@ -2,45 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on FluxLog</title>
-    <link>https://www.fluxengine.dev/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on FluxLog</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 08 Sep 2025 10:00:00 +0200</lastBuildDate>
-    <atom:link href="https://www.fluxengine.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Sep 2025 21:36:43 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>About</title>
-      <link>https://www.fluxengine.dev/tags/about/</link>
-      <pubDate>Mon, 08 Sep 2025 10:00:00 +0200</pubDate>
-      <guid>https://www.fluxengine.dev/tags/about/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Game-Engine</title>
-      <link>https://www.fluxengine.dev/tags/game-engine/</link>
-      <pubDate>Mon, 08 Sep 2025 10:00:00 +0200</pubDate>
-      <guid>https://www.fluxengine.dev/tags/game-engine/</guid>
+      <title>Build-Systems</title>
+      <link>http://localhost:1313/tags/build-systems/</link>
+      <pubDate>Mon, 08 Sep 2025 21:36:43 +0200</pubDate>
+      <guid>http://localhost:1313/tags/build-systems/</guid>
       <description></description>
     </item>
     <item>
       <title>C&#43;&#43;</title>
-      <link>https://www.fluxengine.dev/tags/c&#43;&#43;/</link>
-      <pubDate>Sat, 06 Sep 2025 10:31:53 +0200</pubDate>
-      <guid>https://www.fluxengine.dev/tags/c&#43;&#43;/</guid>
+      <link>http://localhost:1313/tags/c&#43;&#43;/</link>
+      <pubDate>Mon, 08 Sep 2025 21:36:43 +0200</pubDate>
+      <guid>http://localhost:1313/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cmake</title>
+      <link>http://localhost:1313/tags/cmake/</link>
+      <pubDate>Mon, 08 Sep 2025 21:36:43 +0200</pubDate>
+      <guid>http://localhost:1313/tags/cmake/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Game-Engine</title>
+      <link>http://localhost:1313/tags/game-engine/</link>
+      <pubDate>Mon, 08 Sep 2025 21:36:43 +0200</pubDate>
+      <guid>http://localhost:1313/tags/game-engine/</guid>
       <description></description>
     </item>
     <item>
       <title>Programming</title>
-      <link>https://www.fluxengine.dev/tags/programming/</link>
-      <pubDate>Sat, 06 Sep 2025 10:31:53 +0200</pubDate>
-      <guid>https://www.fluxengine.dev/tags/programming/</guid>
+      <link>http://localhost:1313/tags/programming/</link>
+      <pubDate>Mon, 08 Sep 2025 21:36:43 +0200</pubDate>
+      <guid>http://localhost:1313/tags/programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/tags/about/</link>
+      <pubDate>Mon, 08 Sep 2025 10:00:00 +0200</pubDate>
+      <guid>http://localhost:1313/tags/about/</guid>
       <description></description>
     </item>
     <item>
       <title>Vulkan</title>
-      <link>https://www.fluxengine.dev/tags/vulkan/</link>
+      <link>http://localhost:1313/tags/vulkan/</link>
       <pubDate>Sat, 06 Sep 2025 10:31:53 +0200</pubDate>
-      <guid>https://www.fluxengine.dev/tags/vulkan/</guid>
+      <guid>http://localhost:1313/tags/vulkan/</guid>
       <description></description>
     </item>
   </channel>

@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Development on FluxLog</title>
-    <link>http://localhost:1313/categories/development/</link>
-    <description>Recent content in Development on FluxLog</description>
+    <title>Build-Systems on FluxLog</title>
+    <link>http://localhost:1313/tags/build-systems/</link>
+    <description>Recent content in Build-Systems on FluxLog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 08 Sep 2025 21:36:43 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/build-systems/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>C&#43;&#43; Build Systems Are Programming Hell</title>
       <link>http://localhost:1313/posts/cpp-build-system-is-programming-hell/</link>
       <pubDate>Mon, 08 Sep 2025 21:36:43 +0200</pubDate>
       <guid>http://localhost:1313/posts/cpp-build-system-is-programming-hell/</guid>
       <description>&lt;p&gt;Every great human advancement has at least one huge flaw that makes using it a pain in the ass. For space travel, it&amp;rsquo;s &lt;strong&gt;cosmic radiation&lt;/strong&gt;. For the internet, it&amp;rsquo;s &lt;strong&gt;Twitter&lt;/strong&gt;. And for C++, it&amp;rsquo;s the &lt;strong&gt;build system&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;&amp;ldquo;Choosing C++ is easy. Setting up the build system is where souls go to die.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;In the previous post, I talked about my language of choice. I landed on C++ for a couple of reasons (which you can find and criticize there). But I knew that choosing a C-style language came with a tradeoff, a devil&amp;rsquo;s bargain sealed in the 1970s: &lt;strong&gt;the build system&lt;/strong&gt;.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>It&#39;s All C afterall</title>
-      <link>http://localhost:1313/posts/its-all-c-afterall/</link>
-      <pubDate>Sat, 06 Sep 2025 10:31:53 +0200</pubDate>
-      <guid>http://localhost:1313/posts/its-all-c-afterall/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;In the beginning, there was chaos…&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;… and from this chaos emerged a whole bunch of wrong decisions, mistakes, and failures that eventually turned into FluxEngine.&lt;/p&gt;&#xA;&lt;p&gt;In this blog, I’m going to show how a simple intern managed to start creating an engine… instead of accidentally deleting the production DB.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve always wanted to build a game engine,&lt;br&gt;&#xA;so all the dudes on the internet telling me &lt;em&gt;“build games, not game engines”&lt;/em&gt;… well, they sucked for me.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

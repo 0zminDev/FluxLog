@@ -2,24 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Game-Engine on FluxLog</title>
-    <link>https://www.fluxengine.dev/tags/game-engine/</link>
+    <link>http://localhost:1313/tags/game-engine/</link>
     <description>Recent content in Game-Engine on FluxLog</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 08 Sep 2025 10:00:00 +0200</lastBuildDate>
-    <atom:link href="https://www.fluxengine.dev/tags/game-engine/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Sep 2025 21:36:43 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/game-engine/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C&#43;&#43; Build Systems Are Programming Hell</title>
+      <link>http://localhost:1313/posts/cpp-build-system-is-programming-hell/</link>
+      <pubDate>Mon, 08 Sep 2025 21:36:43 +0200</pubDate>
+      <guid>http://localhost:1313/posts/cpp-build-system-is-programming-hell/</guid>
+      <description>&lt;p&gt;Every great human advancement has at least one huge flaw that makes using it a pain in the ass. For space travel, it&amp;rsquo;s &lt;strong&gt;cosmic radiation&lt;/strong&gt;. For the internet, it&amp;rsquo;s &lt;strong&gt;Twitter&lt;/strong&gt;. And for C++, it&amp;rsquo;s the &lt;strong&gt;build system&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;&amp;ldquo;Choosing C++ is easy. Setting up the build system is where souls go to die.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;In the previous post, I talked about my language of choice. I landed on C++ for a couple of reasons (which you can find and criticize there). But I knew that choosing a C-style language came with a tradeoff, a devil&amp;rsquo;s bargain sealed in the 1970s: &lt;strong&gt;the build system&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>About FluxEngine Development</title>
-      <link>https://www.fluxengine.dev/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 08 Sep 2025 10:00:00 +0200</pubDate>
-      <guid>https://www.fluxengine.dev/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>&lt;h2 id=&#34;about-fluxengine&#34;&gt;&#xD;&#xA;  About FluxEngine&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#about-fluxengine&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Welcome to FluxLog, the development blog documenting the creation of &lt;strong&gt;FluxEngine&lt;/strong&gt; - a modern game engine built from scratch using C++ and Vulkan.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-is-fluxengine&#34;&gt;&#xD;&#xA;  What is FluxEngine?&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#what-is-fluxengine&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;FluxEngine is an ambitious indie game engine project that aims to:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Provide a modern, efficient graphics pipeline using Vulkan&lt;/li&gt;&#xA;&lt;li&gt;Implement clean, maintainable C++ architecture&lt;/li&gt;&#xA;&lt;li&gt;Support cross-platform development&lt;/li&gt;&#xA;&lt;li&gt;Offer powerful tools for indie game developers&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;the-journey&#34;&gt;&#xD;&#xA;  The Journey&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#the-journey&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;This blog chronicles the entire development process, from initial language selection debates to complex graphics programming challenges. You&amp;rsquo;ll find:&lt;/p&gt;</description>
     </item>
     <item>
       <title>It&#39;s All C afterall</title>
-      <link>https://www.fluxengine.dev/posts/its-all-c-afterall/</link>
+      <link>http://localhost:1313/posts/its-all-c-afterall/</link>
       <pubDate>Sat, 06 Sep 2025 10:31:53 +0200</pubDate>
-      <guid>https://www.fluxengine.dev/posts/its-all-c-afterall/</guid>
+      <guid>http://localhost:1313/posts/its-all-c-afterall/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;In the beginning, there was chaos…&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;… and from this chaos emerged a whole bunch of wrong decisions, mistakes, and failures that eventually turned into FluxEngine.&lt;/p&gt;&#xA;&lt;p&gt;In this blog, I’m going to show how a simple intern managed to start creating an engine… instead of accidentally deleting the production DB.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve always wanted to build a game engine,&lt;br&gt;&#xA;so all the dudes on the internet telling me &lt;em&gt;“build games, not game engines”&lt;/em&gt;… well, they sucked for me.&lt;/p&gt;</description>
     </item>
   </channel>
