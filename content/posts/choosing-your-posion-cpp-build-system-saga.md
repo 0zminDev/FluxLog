@@ -1,5 +1,5 @@
 +++ 
-draft = true
+draft = false
 date = 2025-09-08T21:36:43+02:00
 title = "Choosing Your Poison: The C++ Build System Saga"
 description = "A deep dive into the nightmare that is C++ build systems - from CMake to Bazel, and why setting up a modern C++ project makes you question your life choices."
